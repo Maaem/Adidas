@@ -1,0 +1,253 @@
+@import  url(anim.css);
+/*réfléchir en composants*/
+/*faire plusieurs nav, carroussel etc pour pouvoir les intégrer dans ton code*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+    width: 100%;
+    height: 50px;
+    background:black;
+    box-shadow: 1px 2px 5px;
+    padding-left: 10px;
+
+}
+
+header > a > h1 {
+    width: 200px;
+    height: 50px;
+    float: left;
+
+}
+
+header > h1 {
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+
+header > a {
+    text-decoration: none;
+    color: white;
+
+}
+
+header > figure {
+    width: 200px;
+    height: 50px;
+    background: red;
+    float: left;
+}
+
+header > nav {
+    width: 500px;
+    height: 50px;
+    float: right;
+}
+
+nav > ul {
+    list-style: none;
+}
+
+ul > li {
+    background:black;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+
+li > a {
+    text-decoration:none;
+    transition: all 1s;
+    display: block;
+    height: 40px;
+    width: 100px;
+    color: snow;
+
+}
+
+li > a:hover{
+    color: crimson;
+    border-bottom: 1px solid crimson;
+    border-radius: 10px;
+}
+
+video.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /*passer derriere le body*/
+    width: 100%;
+}
+
+section#caroussel{
+    width: 100%;
+    height: 500px;
+    /*background: rgb(75, 0, 130,.5) filtre violet devant la video*/;
+    background: rgb(48, 48, 48,.5);
+}
+section#caroussel > hgroup{
+    width: 600px;
+    height: 100px;
+    position: relative;
+    top: 30vh;
+    left: 5%;
+    color:white;
+    font-size: 30px;
+}
+
+section#caroussel > a {
+    position: relative;
+    color:white;
+    top: 35vh;
+    left: 5%;
+    width: 600px;
+    height: 50px;
+    line-height: 50px;
+    text-align:center;
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    display:block;
+    z-index: 1;
+}
+ 
+
+aside{
+    width: 20%;
+    min-height: 200vh;
+    /*contrainte fixible*/
+    background: white;
+    float: left;
+
+}
+
+main{
+    width: 80%; 
+    float: left;
+    min-height: 100vh;
+    /*contrainte fixible*/
+    background: white;
+}
+
+main > section:first-child > article{
+    float: left;
+    width: 50%;
+    min-height: 600px;
+    border: 15px solid white;
+}
+
+section:first-child > article:nth-of-type(1){
+    background: url(../img/danse.jpg) 0 50px no-repeat white;
+    background-size: contain;  
+}
+
+section:first-child > article:last-child{
+    background:url(../img/logo-flyer.jpg) 0 50px no-repeat white;
+    background-size:contain ;
+}
+
+section:first-child > article:last-child > hgroup {
+    margin: 45vh auto 20px;
+    width: 50%;
+    color: white;
+}
+
+section:first-child > article:last-child > a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    background: white;
+    color: grey;
+    margin: auto;
+    transition: .5s;
+}
+
+section:first-child > article:last-child > a:hover{
+    border-radius: 20px;
+    color:white;
+    background: crimson;
+    border: 1px solid white;
+}
+
+
+
+h3,h4, h2 {
+text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin: 10px 0;
+}
+
+section > article > header {
+    width: 50%;
+    margin:0 auto 55vh;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+section > article > p{
+    width: 90%;
+    margin: 10px auto;
+}
+
+section > article > footer {
+    width: 100%;
+    background: black;
+    color: white;
+    height: 50px;
+}
+
+footer > p {
+    text-align: center;
+
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: orange;
+    line-height: 50px; /*centrer dans le cadre noir */
+}
+
+
+main > section:nth-child(2) >figure > img{
+    max-width: 100%;/*responsive*/
+
+}
+
+a[title="comment"]{
+    position: fixed;
+    right: 0;
+    top: 25vh;
+    display: block;
+    background: orange;
+    color: white;
+    writing-mode: vertical-rl;/*Changer la position du texte*/
+    text-orientation: upright;
+    text-decoration: none;
+    padding: 10px;
+}
+
+section:first-child,section:nth-child(2){
+    min-height: 100vh;
+}

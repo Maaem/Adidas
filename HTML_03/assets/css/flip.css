@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.global {
+    width: 320px;
+    margin: 10% auto;
+}
+
+div.container {
+ perspective: 200px; /*faire un effet de page tourner*/
+}
+
+/*basculer la page lorsque on survole le parent qui est donc container*/
+div.container:hover > div.page {
+    transform: rotateY(180deg); /* rotateY = X* : axe Y - rotation X/
+    transform-origin: 160px 0px; /*320 * 2 = 160 : transformer au point d'origine : faire sa rotation au point d'origine*/
+}
+
+/*dimension de tous les elements*/
+div.container, div.devant, div.arriere {
+    width: 320px;
+    height: 480px;
+}
+
+/*la vitesse de rotation*/
+div.page{
+    transition: .5s;
+    transform-style: preserve-3d; /*quand on survole, ca cache une face : faire comprendre qu'il y a 2 faces : face cacher*/
+}
+
+/*cacher le fond des faces */
+div.devant, div.arriere {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*face à afficher par défaut et orientation par defaut*/
+div.devant {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+/*face de dos et orientation retourner*/
+div.arriere {
+    transform: rotateY(180deg);
+    background: black;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}

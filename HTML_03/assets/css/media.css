@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*propriété css generale pour l'ensemble*/
+}
+
+body {
+    background: beige;
+    /*height : 300vh = pour un site plus grand*/
+}
+
+
+header {
+    background: white;
+    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+
+
+
+main > p {
+    width: 33,33%;
+    margin: 5px 15px;
+    min-width: 320px;
+    flex: 1;
+}
+
+main.wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.body-wrapper {
+    margin: 100px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*section{baground :url()}*/
+
+nav {
+    position: fixed; /*fixed la nav bar*/
+    right: 0;
+    top: 0;
+    width: 50%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    width: 25%;
+    display: block;
+    float: left;
+    line-height: 50px;
+    min-height: 50px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    color: crimson;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+i.pose, .fa-bars {
+    visibility: hidden;
+}
+
+
+
+
+/*smartphone*/
+@media screen and (max-width:768px) {
+    /*aucune action de votre part btn croix*/
+#ouvrir:not(:target){
+    right: -100%;
+    transition: right 2s;
+}
+
+/*action  ouverture de votre part btn burger*/
+#ouvrir:target{
+    right: 0;
+    transition: right 1.5s;
+}
+
+/*article */
+#ouvrir{
+    overflow: hidden;
+    border: 1px solid black;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    width: 80%;
+    max-width: 320px;
+    background: white;
+    box-shadow: -3px 0 10px rgba(0,0,0,.2);
+}
+
+/*section{baground :url()}*/
+
+
+nav {
+    padding-left: 150px;
+    margin: top;
+    position: initial; /*annuler un positionnement fix*/
+}
+
+nav ul {
+    min-height: 400px;
+    list-style: none;
+}
+
+nav ul li {
+    width: 100%;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+i.pose {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    visibility: visible;
+}
+
+i.pose, .fa-bars {
+    visibility: visible;
+}
+
+header > a {
+    color: red;
+}
+
+figure {
+    width: 50%;
+    margin: 10px auto;
+    height: 80px;
+    background: black;
+}
+
+main > p {
+    padding: 0 20px;
+
+}
+
+
+    
+    
+}
+
+/* zone flex 
+
+main{width: 100%;
+    min-height: 600px;
+    /* pour l'enfant section 
+    display: flex;
+    justify-content: center;
+    /*
+    
+    section{
+    width: 90%;
+    background: blue;
+    min-height: 500px;
+    /* pour les enfants articles *
+    display: flex
+    flex-flow: row;
+    /* justify-content en row justifier dans l'axe des X gauche centre droite
+    justify-content:center;
+    /* align-items en row justifier dans l'axe des Y haut milieu(center) bas 
+    align-items: center;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    }
+    
+    
+    article{
+     width: 400px;
+    height: 500px;
+    min-width: 320px;*/
+    
+    /*seulement les actions de flex a coder dans les enfants
+        flex:1 - order - align-self 
+    }
+    
+    section > article:first-of-type{background: yellow;  }
+    
+    section > article:nth-child(2){background: brown; align-self: flex-start }
+    
+    section > article:last-child{background: turquoise; align-self: flex-end }*/

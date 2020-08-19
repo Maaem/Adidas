@@ -1,0 +1,45 @@
+/*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+figure {
+    cursor: pointer; /*faire un curseur pointeur*/
+    width: 24%;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;/*exterieur de figure = pas visible*/
+    border-radius: 10px;
+    position: relative;
+}
+
+img{
+    max-width: 100%;/*responsive*/
+}
+
+figcaption{
+    display: block;
+    height: 200px;
+    width: 100%;
+    color: white;background: red;
+    float: left;
+    border-left: 1px solid white;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    left: 0;
+    top: 200px;
+    transition-property: top;
+    transition: 1s;
+    font-size: 20px;
+    padding:10px 0 0 10px ;
+}
+
+figure:hover figcaption{
+    top: 82px;
+}
+
+figure:hover figcaption:nth-child(2){
+    right: 32px;
+}
+

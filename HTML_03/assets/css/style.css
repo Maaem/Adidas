@@ -1,0 +1,87 @@
+/* " * " = selecteur universel*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+/*explication boxs*/
+}
+
+main#wrap{
+    width: 800px;
+    margin: auto;
+}
+
+div > p {
+    color: red;
+} /* enfants direct de p qui est à l'intérieur de div*/
+
+div + p {
+    color: green;
+} /*selecteur adjacent que l'élément qui ce trouve en premier juste en dessous de la fermeture*/
+
+article ~ p {
+    color:orange;
+} /*Combinateur de freres est proche du selecteur + 
+moins strict a une portée plus générale*/
+
+a[title]{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}/*selecteur d'attribut*/
+
+/*
+a[href="http://www.doranco.fr"]{
+    color: burlywood;
+    text-decoration: none;
+}*/
+
+a[href*="dora"] {
+    color: crimson;
+} /*selecteur attribut avec option universelles donc "*" */
+
+li > a[href^="http"]{
+    background: url(../img/logo.png) 0 5px no-repeat;
+    text-decoration: none;
+    border: 1px solid black;
+    color: deeppink;
+    padding: 0 10px;
+}/*selecteur caret ^*/
+
+ul{
+    list-style: none;
+}
+/* OOCSS = Orienté objet CSS*/
+/* mail du formmateur pour stage : graphistewebdesigner@hotmail.com */
+
+section{
+    width: 900px;
+    margin: auto;
+}
+
+section > article{
+    width: 300px;
+    float: left;
+    height: 300px;
+}
+
+/*cibler les enfants et les voisins au meme niveau*/
+article:first-child{
+    background: purple;
+    padding-left: 20px;
+}
+
+article:nth-child(2){
+    background: khaki;
+}
+
+article:nth-child(3){
+    background: beige;
+}
+
+/* p:nth-of-type(n){} = cibler les descendants du meme parents 
+p:nth-of-type(2n){} = cibler un p sur 2 */
+
+p:nth-of-type(odd){
+    color: snow;
+}

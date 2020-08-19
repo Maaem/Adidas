@@ -1,0 +1,44 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box}
+    
+    main{width: 100%;
+    min-height: 600px;
+    background: grey;
+    /* pour l'enfant section */
+    display: flex;
+    justify-content: center;
+    }
+    
+    section{
+    width: 90%;
+    background: blue;
+    min-height: 500px;
+    /* pour les enfants articles */
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content en row justifier dans l'axe des X gauche centre droite*/
+    justify-content:space-around;
+    /* align-items en row justifier dans l'axe des Y haut milieu(center) bas */
+    align-items: center;
+    /*
+    flex-direction: row;
+    flex-wrap: wrap;
+    */
+    }
+    
+    
+    article{
+     width: 400px;
+    height: 500px;
+    min-width: 320px;
+    
+    /*seulement les actions de flex a coder dans les enfants
+        flex:1 - order - align-self */
+    }
+    
+    section > article:first-of-type{background: yellow;  }
+    
+    section > article:nth-child(2){background: brown; align-self: flex-start }
+    
+    section > article:last-child{background: turquoise; align-self: flex-end }
